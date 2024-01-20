@@ -1,6 +1,8 @@
 import { createHandler } from "@solidjs/start/entry";
 import { StartServer } from "@solidjs/start/server";
 
+import "./server.css";
+
 export default createHandler(() => (
   <StartServer
     document={({ assets, children, scripts }) => (
