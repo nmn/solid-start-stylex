@@ -1,30 +1,13 @@
-# SolidStart
+# SolidStart-StyleX
 
-Everything you need to build a Solid project, powered by [`solid-start`](https://start.solidjs.com);
+This is a project to make StyleX work with SolidStart in particular and Vinxi in general.
 
-## Creating a project
+The StyleX plugin is conceptually simple:
 
-```bash
-# create a new project in the current directory
-npm init solid@latest
+1. Transform all JS files using the Babel plugin.
+2. Collect metadata from those JS files during transformation
+3. Generate a single CSS file from the collected metadata
 
-# create a new project in my-app
-npm init solid@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-Solid apps are built with _adapters_, which optimise your project for deployment to different environments.
-
-By default, `npm run build` will generate a Node app that you can run with `npm start`. To use a different adapter, add it to the `devDependencies` in `package.json` and specify in your `vite.config.js`.
+The challenge comes from the fact that Vinxi is creating multiple bundles.
+Some files aren't part of the client bundle, but we still want to collect
+the styles as metadata from them.
