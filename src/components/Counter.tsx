@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import { createSignal } from "solid-js";
 import * as stylex from "@stylexjs/stylex";

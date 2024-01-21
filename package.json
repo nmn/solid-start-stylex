@@ -2,7 +2,7 @@
   "name": "solid-start-stylex",
   "type": "module",
   "scripts": {
-    "clean": "rm -rf .output node_modules/.vite",
+    "clean": "rm -rf .output .vinxi node_modules/.vite",
     "predev": "npm run clean",
     "dev": "vinxi dev",
     "prebuild": "npm run clean",

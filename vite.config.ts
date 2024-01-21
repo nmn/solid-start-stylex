@@ -10,7 +10,7 @@ export default defineConfig({
   plugins: [
     // { ...pre(), enforce: "pre" },
     // @ts-ignore
-    styleX(),
+    { ...styleX(), enforce: "pre" },
     // styleXPlugin(),
   ],
   // dev: { headers: { "Cache-Control": "public, max-age=0" } },
