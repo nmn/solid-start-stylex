@@ -1,12 +1,14 @@
+"use client";
+
 import { Title } from "@solidjs/meta";
 import Counter from "~/components/Counter";
 import * as stylex from "@stylexjs/stylex";
 
 export default function Home() {
   return (
-    <main {...stylex.attrs(s.main)}>
+    <main {...stylex.props(s.main)}>
       <Title>Hello World</Title>
-      <h1 {...stylex.attrs(s.h1)}>Hello world!</h1>
+      <h1 {...stylex.props(s.h1)}>Hello world!</h1>
       <Counter />
       <p>
         Visit{" "}
